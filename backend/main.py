@@ -9,11 +9,8 @@ app = FastAPI(title="Minimalist Habit Tracker")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "https://minimalist-habit-tracker-production.up.railway.app",
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
